@@ -1,6 +1,6 @@
 {
   "name": "vue-ultra-sidenav",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run build:sidenav",
@@ -12,7 +12,7 @@
   },
   "main": "index.js",
   "module": "index.js",
-  "repository": "",
+  "repository": "git://github.com/jesus9ias/vue-ultra-sidenav.git",
   "author": "Jesus Escamilla",
   "dependencies": {
     "core-js": "^2.6.5",
