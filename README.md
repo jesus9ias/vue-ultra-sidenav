@@ -1,4 +1,4 @@
-# styled-inputs
+# vue-ultra-sidenav
 
 ## Project setup
 ```
