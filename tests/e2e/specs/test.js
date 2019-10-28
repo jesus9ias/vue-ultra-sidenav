@@ -17,5 +17,5 @@ module.exports = {
       .openHomepage()
       .assert.elementPresent('.hello')
       .end();
-  },
+  }
 };

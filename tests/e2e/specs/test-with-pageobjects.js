@@ -26,5 +26,5 @@ module.exports = {
     const welcomeSection = homepage.section.app.section.welcome;
 
     welcomeSection.expect.element('@cliPluginLinks').text.to.contain('e2e-nightwatch');
-  },
+  }
 };
