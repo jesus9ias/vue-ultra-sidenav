@@ -1,18 +1,24 @@
 <template>
-  <div
+  <a
     class="sidenav__link"
-    @click="clickLink"
+    :href="url"
+    :target="target"
   >
     <slot></slot>
-  </div>
+  </a>
 </template>
 
 <script>
 export default {
   name: 'SidenavLink',
-  methods: {
-    clickLink() {
-      this.$emit('click');
+  props: {
+    url: {
+      type: String,
+      default: ''
+    },
+    target: {
+      type: String,
+      default: ''
     }
   }
 };
