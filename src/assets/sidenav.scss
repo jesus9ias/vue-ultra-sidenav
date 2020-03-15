@@ -10,8 +10,16 @@
     overflow-x: auto;
     background: black;
     z-index: 4;
+    &--right {
+      left: inherit;
+      right: 0px;
+      .sidenav__toggle {
+        margin-left: auto;
+      }
+    }
   }
   &__toggle {
+    display: block;
     margin: 5px;
     width: 24px;
     &:hover {
@@ -47,6 +55,7 @@
   }
 }
 
+// Fade left
 .fade-enter-active {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
@@ -59,6 +68,21 @@
   opacity: 0;
 }
 
+// Fade left
+.faderight-enter-active {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  animation-duration: 0.5s;
+}
+.faderight-leave-active {
+  transition: opacity .5s;
+}
+.faderight-enter, .faderight-leave-to {
+  opacity: 0;
+}
+
+
+// Anim left
 @-webkit-keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -78,6 +102,35 @@
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// Anim right
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 
   to {

@@ -81,6 +81,7 @@ export default {
 |backdrop   |boolean                         |true                           |Defines if backdrop is used or not        |
 |transition |string (Name of css transition) |fade (Defined on internal css) |Set css animation to open and close event |
 |closeIcon  |string (Path to proyect image)  |null (Internal icon is used)   |Send icon to use on close button          |
+|fixLeft    |boolean                         |true                           |Fix to ledt side                          |
 
 ## Contribution
 

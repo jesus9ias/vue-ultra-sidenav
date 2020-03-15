@@ -1,9 +1,10 @@
 <template>
   <div class="sidenav">
-    <transition :name="transition">
+    <transition :name="theTransition">
       <aside
         v-if="isOpen"
         class="sidenav__bar"
+        :class="{ 'sidenav__bar--right': !fixLeft }"
       >
         <img
           width="48px"
@@ -45,11 +46,18 @@ export default {
     backdrop: {
       type: Boolean,
       default: true
+    },
+    fixLeft: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {
     usedCloseIcon() {
       return this.closeIcon || icon;
+    },
+    theTransition() {
+      return this.fixLeft ? this.transition : `${this.transition}right`;
     }
   },
   methods: {
@@ -59,6 +67,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-</style>
